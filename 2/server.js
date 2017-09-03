@@ -58,5 +58,5 @@ var server = http.createServer(function(req, res) {
 chatServer.listen(server);
 
 server.listen(3003, function() {
-    console.log("Server listening on port 3000.");
+    console.log("Server listening on port 3003.");
 });
