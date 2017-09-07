@@ -42,7 +42,7 @@ function serveStatic(res, cache, absPath) {
 }
 
 var server = http.createServer(function(req, res) {
-    console.log(req.connection.remoteAddress, req.url);
+    console.log(req.headers.host, req.url);
     var filePath = false;
     
     if(req.url == '/') {
