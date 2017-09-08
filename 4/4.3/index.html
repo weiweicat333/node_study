@@ -1,0 +1,16 @@
+<p>a.html</p>
+<!--<iframe scrolling="no" height="" width="100%" id="weibo" src="http://widget.weibo.com/hotmblog/feedlist.php?keyword=%E5%AE%9D%E9%A9%AC,%E5%A5%94%E9%A9%B0" name="weibo_iframe"></iframe>-->
+<iframe style="overflow:none;" height="" width="100%" id="weibo" src="http://widget.weibo.com/hotmblog/feedlist.php?keyword=%E5%AE%9D%E9%A9%AC,%E5%A5%94%E9%A9%B0" name="weibo_iframe"></iframe>
+<script>
+    var weibo = document.getElementById('weibo');
+
+    window.addEventListener('message',function(e){
+        // weibo.setAttribute('height', e.data.height);
+        console.log(e.data);
+    }, false);
+
+    window.lazyLoad = function() {
+        top.frames['weibo_iframe'].postMessage({from : 'tianyi', canload : true},'http://widget.weibo.com');
+    };
+
+</script>
