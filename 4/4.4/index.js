@@ -3,7 +3,7 @@ var qs = require('querystring');
 var items = [];
 
 var server = http.createServer(function(req, res) {
-    if('/' = req.url) {
+    if('/' == req.url) {
         switch (req.method) {
             case 'GET' :
                 show(res);
